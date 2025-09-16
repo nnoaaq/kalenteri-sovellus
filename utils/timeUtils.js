@@ -9,7 +9,7 @@ function convertDateToIsoFormat(dateStr, timeStr) {
 
   let [hour, minute] = timeStr.split(":").map(Number);
   // Muodosta alkuperäinen päivämäärä
-  const date = new Date(`${year}-${month}-${day}T00:00:00`);
+  const date = new Date(`${year}-${month}-${day}T03:00:00`);
   // Lisää tunnit ja minuutit
   date.setHours(date.getHours() + hour);
   date.setMinutes(date.getMinutes() + minute);

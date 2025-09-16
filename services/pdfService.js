@@ -23,11 +23,11 @@ function convertRawDataToDayBlocks(rawData) {
           description: "",
           start: {
             dateTime: "",
-            timeZone: "Europe/Helsinki",
+            timeZone: "UTC",
           },
           end: {
             dateTime: "",
-            timeZone: "Europe/Helsinki",
+            timeZone: "UTC",
           },
         };
         const drivedLines = [...new Set(allLines)];

@@ -14,7 +14,6 @@ function convertDateToIsoFormat(dateStr, timeStr) {
   return utcDate.toISOString();
 }
 
-console.log(convertDateToIsoFormat("22.09.2025", "07:07"));
 module.exports = {
   convertTimeToMinutes,
   convertDateToIsoFormat,

@@ -8,15 +8,12 @@ function convertDateToIsoFormat(dateStr, timeStr) {
   month = month.padStart(2, "0");
 
   let [hour, minute] = timeStr.split(":").map(Number);
-  // Muodosta alkuperäinen päivämäärä
-  const date = new Date(`${year}-${month}-${day}T03:00:00`);
-  // Lisää tunnit ja minuutit
+  const date = new Date(`${year}-${month}-${day}T00:00:00`);
   date.setHours(date.getHours() + hour);
   date.setMinutes(date.getMinutes() + minute);
-
-  // Muodosta ISO 8601 -merkkijono
-  return date.toISOString(); // Poistetaan 'Z' jos ei haluta UTC-aikaa
+  return date;
 }
+console.log(convertDateToIsoFormat("22.09.2025", "07:07"));
 module.exports = {
   convertTimeToMinutes,
   convertDateToIsoFormat,

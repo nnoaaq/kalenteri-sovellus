@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { getOAuthClient } = require("../services/oAuthService");
-const tokenFilePath = path.join("/tmp", "tokens.json");
+const tokenFilePath = path.join(__dirname, "../tmp", "tokens.json");
 function verifyTokens() {
   try {
     const tokenFile = fs.readFileSync(tokenFilePath, "utf-8");
@@ -28,6 +28,7 @@ async function saveTokens(code) {
       return true;
     } catch (error) {
       console.error("Virhe tokenien tallentamisesa:" + error);
+      console.log;
       return false;
     }
   } catch (err) {

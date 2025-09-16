@@ -10,6 +10,7 @@ function convertDateToIsoFormat(dateStr, timeStr) {
   let [hour, minute] = timeStr.split(":").map(Number);
 
   const utcDate = new Date(Date.UTC(year, month - 1, day, hour, minute));
+  utcDate.setTime(utcDate.getTime() - 3 * 60 * 60 * 1000);
 
   return utcDate.toISOString();
 }

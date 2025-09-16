@@ -8,7 +8,7 @@ function convertDateToIsoFormat(dateStr, timeStr) {
   month = month.padStart(2, "0");
 
   let [hour, minute] = timeStr.split(":").map(Number);
-  const date = new Date(`${year}-${month}-${day}T00:00:00`);
+  const date = new Date(`${year}-${month}-${day}T03:00:00`);
   date.setHours(date.getHours() + hour);
   date.setMinutes(date.getMinutes() + minute);
   return date;
